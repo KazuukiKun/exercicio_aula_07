@@ -1,0 +1,71 @@
+
+html, body{
+
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img{
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+}
+
+section{
+    display: grid;
+    grid-template-columns: 200px 200px 200px 200px;
+    justify-content: center;
+    padding-top: 60px;
+    
+    
+}
+
+article{
+
+    height: 150px;
+    width: 150px;
+    transform-style: preserve-3d;
+    transition: all 1s ease-in-out;
+    perspective: 600;
+    position: relative;
+    margin-top: 30px;
+}
+
+img:hover{
+    box-shadow: 10px 10px 20px rgb(32, 32, 32) ;
+}
+
+
+#switch:checked ~ label #v1, #switch2:checked ~ label #v2, #switch3:checked ~ label #v3,  #switch4:checked ~ label #v4,  #switch5:checked ~ label #v5,  #switch6:checked ~ label #v6,  #switch7:checked ~ label #v7,  #switch8:checked ~ label #v8,  #switch9:checked ~ label #v9,  #switch10:checked ~ label #v10,  #switch11:checked ~ label #v11,  #switch12:checked ~ label #v12 {
+    transform: rotateY(180deg);
+}
+
+
+article .side{
+    backface-visibility: hidden;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    
+    
+}
+
+article .back{
+    transform: rotateY(180deg);
+    text-align: center;
+    font-size: 16pt;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    line-height: 150px;
+    background: rgb(202, 201, 201);
+    color: rgb(16, 182, 182);
+    border-radius: 10px;
+    
+}
+
+#switch, #switch2, #switch3, #switch4, #switch5, #switch6, #switch7, #switch8, #switch9, #switch10, #switch11, #switch12{
+    display: none;
+}
